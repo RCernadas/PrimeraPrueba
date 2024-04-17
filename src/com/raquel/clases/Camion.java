@@ -61,13 +61,6 @@ public class Camion extends Vehiculo implements Matricula {
 	}
 
 	@Override
-	public String toString() {
-		return "Camion [matricula=" + matricula + ", velocidadesTacometro=" + velocidadesTacometro
-				+ ", anhoFabricacion=" + anhoFabricacion + ", tipoTransporte=" + tipoTransporte + ", color=" + color
-				+ "]";
-	}
-
-	@Override
 	public String generarMatricula() {
 		// String regex = "^[0-9]{4}[A-Z]{3}$";
 		String matricula = "";
@@ -77,10 +70,18 @@ public class Camion extends Vehiculo implements Matricula {
 			if (i <= 4) {
 				matricula += Integer.toString((int) (Math.random() * 10));
 			} else {
-				matricula += (String.valueOf((char) (rnd.nextInt(91) + 65)));
+				matricula += (String.valueOf((char) (Math.random() * 26 + 65)));
 			}
 		}
 		return matricula;
 	}
 
+	@Override
+	public String toString() {
+		return "Camion [matricula=" + matricula + ", velocidadesTacometro=" + velocidadesTacometro
+				+ ", anhoFabricacion=" + anhoFabricacion + ", tipoTransporte=" + tipoTransporte + ", color=" + color
+				+ "]";
+	}
+
+	
 }
