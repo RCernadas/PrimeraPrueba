@@ -11,9 +11,9 @@ import com.raquel.interfaces.Conducible;
  *
  */
 public abstract class Vehiculo implements Conducible {
-	protected int anhoFabricacion;
 	protected TipoTransporte tipoTransporte;
 	protected Color color;
+	protected int anhoFabricacion;
 	
 	public Vehiculo(int anhoFabricacion, TipoTransporte tipoTransporte,Color color) {
 		this.anhoFabricacion = anhoFabricacion;
@@ -26,6 +26,4 @@ public abstract class Vehiculo implements Conducible {
 		return "Vehiculo [anhoFabricacion=" + anhoFabricacion + ", tipoTransporte=" + tipoTransporte + ", color="
 				+ color + "]";
 	}
-	
-	
 }
